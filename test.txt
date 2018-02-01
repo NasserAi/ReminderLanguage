@@ -1,0 +1,80 @@
+CREATE{
+  ID:1;
+  NAME_1:OS final exam;
+  CONTENT_1:Need to be well prepared before Wednesday;
+ REMIND_DATE_1:16-05-2017;
+  REPEAT_1:no;
+}
+
+CREATE{
+  ID:2;
+  NAME_2:Summer class begin;
+  CONTENT_2:Studying during summer;
+  REMIND_DATE_2:01-06-2017;
+  REPEAT_2:no;
+}
+
+CREATE{
+  ID:3;
+  NAME_3:Name3;
+  CONTENT_3:A wonderful day;
+  REMIND_DATE_3:12-04-2018;
+  REPEAT_3:no;
+}
+
+CREATE{
+  ID:4;
+  NAME_4:test file 4;
+  CONTENT_4:No matter what is it;
+  REMIND_DATE_4:10-05-2021;
+  REPEAT_4:no;
+}
+
+CREATE{
+  ID:5;
+  NAME_5:Moive Night;
+  CONTENT_5:Go to AMC to watch ALIEN;
+  REMIND_DATE_5:19-05-2017;
+  REPEAT_5:no;
+}
+
+EDIT{
+  for(i:0;i<datalist;i++){
+    if(ID:2){
+      NEW_CONTENT_1:NewContent;
+      NEW_DATE_1:19-05-2023;
+    }
+  }
+}
+
+
+DELETE{
+  ID:3;
+}
+
+
+REMIND{
+   days( 7);
+   for(i:0;i<datalist;i++){
+    if( 7){
+	print(event);
+    }
+  }
+}
+
+
+SEARCH{
+   for(i:0;i<datalist;i++){
+    if((11-03-2022)to(25-04-2024)){
+	print(event);
+    }
+  }
+}
+
+
+PRINT{
+   show all;
+   for(i:0;i<datalist;i++){
+        print(event);
+   }
+}
